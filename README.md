@@ -1,3 +1,6 @@
+#Airline project made using flask for school
+
+
 make sure you create a folder and add all of the project files in the zip to it. open the folder in VS code. Then open up a terminal and do the following.
 
 NOTE: There are TWO different requirement text files. make sure you type the correct one 
