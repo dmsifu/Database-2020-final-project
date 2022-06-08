@@ -1,5 +1,7 @@
 #Airline project made using flask for school
 
+![ERMODEL](https://user-images.githubusercontent.com/97478849/172708593-e1cc5703-0407-4690-b845-c034d4780374.png)
+
 
 make sure you create a folder and add all of the project files in the zip to it. open the folder in VS code. Then open up a terminal and do the following.
 
