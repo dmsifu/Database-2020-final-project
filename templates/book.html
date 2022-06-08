@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Airline Website</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            tr:nth-child(even){
+                background-color: #e3e3e3;
+            }
+            .table{
+                background-color: #c4c4c4;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 30px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%,-50%);
+            }
+            .return{
+                color: black;
+                font-size: 20px;
+                text-align: left;
+                margin-top: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="return">
+            <a class="active" href="/returnToHome">return to homepage</a>
+        </div>
+        <div style="text-align: center;">
+            <h1>Airline Website</h1>
+        </div>
+        <div>
+            <h4>Below are available flights to be booked</h4>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>flight id</th>
+                        <th>direct/indirect</th>
+                        <th>scheduled departure</th>
+                        <th>scheduled arrival</th>
+                        <th>Departure airport</th>
+                        <th>Arrival airport</th>
+                        <th>seats available</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in data %}
+                    <tr>
+                        <td>{{item[0]}}</td>
+                        <td>{{item[1]}}</td>
+                        <td>{{item[2]}}</td>
+                        <td>{{item[3]}}</td>
+                        <td>{{item[4]}}</td>
+                        <td>{{item[5]}}</td>
+                        <td>{{item[6]}}</td>
+
+                        <td>
+                            <form action="/book" method="POST">
+                                <button type="submit" name="submit_button" id="submit_button" value="{{item[0]}}">book flight</button>
+                            </form>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

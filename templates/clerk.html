@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Airline Website</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            tr:nth-child(even){
+                background-color: #e3e3e3;
+            }
+            .table{
+                background-color: #c4c4c4;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 30px;
+            }
+            .return{
+                color: black;
+                font-size: 20px;
+                text-align: left;
+                margin-top: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="return">
+            <a class="active" href="/returnToHome">return to homepage</a>
+        </div>
+        <div style="text-align: center;">
+            <h1>Airline Website</h1>
+        </div>
+        <div>
+            <h2 style="text-align: center;">Below are the people currently on a waitlist</h2>
+            <h2>clerk info</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>waitlist id</th>
+                        <th>passenger name</th>
+                        <th>email</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in data %}
+                    <tr>
+                        <td>{{item[0]}}</td>
+                        <td>{{item[1]}}</td>
+                        <td>{{item[2]}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

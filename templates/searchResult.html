@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Airline Website</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            tr:nth-child(even){
+                background-color: #e3e3e3;
+            }
+            .table{
+                background-color: #c4c4c4;
+                margin-left: auto;
+                margin-right: auto;
+                margin-top: 30px;
+            }
+            .return{
+                color: black;
+                font-size: 20px;
+                text-align: left;
+                margin-top: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="return">
+            <a class="active" href="/returnToHome">return to homepage</a>
+        </div>
+        <div style="text-align: center;">
+            <h1>Airline Website</h1>
+        </div>
+        <div>
+            <h2 style="text-align: center;">Below is your flight information</h2>
+            <h2>Passenger info</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>ticket number</th>
+                        <th>passenger name</th>
+                        <th>email</th>
+                        <th>phone</th>
+                        <th>amount due</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in data1 %}
+                    <tr>
+                        <td>{{item[0]}}</td>
+                        <td>{{item[1]}}</td>
+                        <td>{{item[2]}}</td>
+                        <td>{{item[3]}}</td>
+                        <td>{{item[4]}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h2>Flight info</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>flight id</th>
+                        <th>flight type</th>
+                        <th>scheduled departure</th>
+                        <th>scheduled arrival</th>
+                        <th>departure airport</th>
+                        <th>arrival airport</th>
+                        <th>movie</th>
+                        <th>meal</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in data2 %}
+                    <tr>
+                        <td>{{item[1]}}</td>
+                        <td>{{item[2]}}</td>
+                        <td>{{item[3]}}</td>
+                        <td>{{item[4]}}</td>
+                        <td>{{item[5]}}</td>
+                        <td>{{item[6]}}</td>
+                        <td>{{item[7]}}</td>
+                        <td>{{item[8]}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <h2>Bagggage info</h2>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>boarding id</th>
+                        <th>departure gate</th>
+                        <th>boarding time</th>
+                        <th>arrival time</th>
+                        <th>arrival gate</th>
+                        <th>baggage claim</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in data3 %}
+                    <tr>
+                        <td>{{item[1]}}</td>
+                        <td>{{item[2]}}</td>
+                        <td>{{item[3]}}</td>
+                        <td>{{item[4]}}</td>
+                        <td>{{item[5]}}</td>
+                        <td>{{item[6]}}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </body>
+</html>

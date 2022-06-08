@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Airline Website</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            .container{
+                margin-top: 70px;
+                text-align: center;
+            }
+            .container a{
+                font-size: 30px;
+            }
+            .button{
+                color:red;
+                font-size: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="return">
+            <a class="active" style="font-size: 25px;" href="/returnToHome">return to homepage</a>
+        </div>
+        <div class="container">
+            <div>
+                <h1>Airline Website</h1>
+                <h1>THE BUTTON BELOW WILL RESET THE DATABASE</h1>
+                <h1>please DO NOT reset if you dont need to. </h1>
+                <h1>only reset if you really need to as other teams will be testing at the same time</h1>
+            </div>
+            <div>
+                <form action="/reset" method="POST">
+                    <button class="button" type="submit" name="reset" id="reset" value="reset">RESET</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

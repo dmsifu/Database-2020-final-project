@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Airline Website</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            .container{
+                margin-top: 10px;
+                text-align: center;
+            }
+            .return{
+                color: black;
+                font-size: 20px;
+                text-align: left;
+                margin-top: 0;
+            }
+            input[type="radio"]{
+                margin: 0 7px 0 7px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="return">
+            <a class="active" href="/returnToHome">return to homepage</a>
+        </div>
+        <div class="container">
+            <div>
+                <h1>Airline Website</h1>
+            </div>
+            <div>
+                <h3>Please fill the form below with your info</h3>
+                <form action="/info" method='POST'> 
+                    <label for="name">Name:</label><br>
+                    <input type="text" placeholder="type name here" id="name" name="name"><br>
+                    <label for="email">Email:</label><br>
+                    <input type="text" placeholder="type email here" id="email" name="email"><br>
+                    <label for="phonenumber">Phonenumber:</label><br>
+                    <input type="text" placeholder="type phonenumber here" id="phonenumber" name="phonenumber"><br>
+                    <label for="payment">payment:</label><br>
+                    <input type="text" placeholder="cardnumber here" id="payment" name="payment"><br>
+                    <h6>Choose your currency type below</h5>
+                    <input type="radio" id="USD" name="currency" value="USD">
+                    <label for="USD">United States Dollar</label>
+                    <input type="radio" id="CAD" name="currency" value="CAD">
+                    <label for="CAD">Canadian Dollar</label>
+                    <h6>Choose your flight class</h5>
+                    <input type="radio" name="fc" id="economy" value="economy">
+                    <label for="economy">economy</label>
+                    <input type="radio" name="fc" id="business" value="business">
+                    <label for="business">business</label>
+                    <h6>Would you like a 10% discount</h6>
+                    <input type="radio" name="discount" id="yes" value="yes">
+                    <label for="business">yes please</label>
+                    <input type="radio" name="discount" id="no" value="no">
+                    <label for="business">no thanks im rich</label>
+                    <h6>Who will you be flying with:</h6>
+                    <input type="radio" name="status" id="solo" value="Solo">
+                    <label for="business">solo</label>
+                    <input type="radio" name="status" id="couple" value="Couple">
+                    <label for="business">couple</label>
+                    <input type="radio" name="status" id="family" value="Family">
+                    <label for="business">family</label>
+                    <input type="radio" name="status" id="group" value="Group">
+                    <label for="business">group</label><br>
+                    <button type="submit" name="submit_info" value="submit">submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

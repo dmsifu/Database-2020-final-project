@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Airline Website</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            body{
+                text-align: center;
+            }
+            .return{
+                padding-top: 20px;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div>
+            <h1>Airline Website</h1>
+        </div>
+        <div>
+            <h3>Congrats your flight has been booked! Below is your flight info.</h3>
+            <h3>If you'd like more info on your flight please search the ticket number on the search page</h3>
+            <h5>Your name: {{info[0]}}</h5>
+            <h5>Your flight ID: {{info[1]}}</h5>
+            <h5>Your booking number: {{info[2]}}</h5>
+            <h5>Your ticket number: {{info[3]}}</h5>
+            <h5>second ticket if you are on a connecting flight: {{ticketNum2}}</h5>
+            <h5>Total amount due: ${{info[4]}}</h5>
+        </div>
+        <div class="return">
+            <a class="active" href="/findFlight">search your flight info</a><br>
+            <a class="active" href="/returnToHome">return to homepage</a>
+        </div>
+    </body>
+</html>

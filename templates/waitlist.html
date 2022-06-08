@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Airline Website</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            .container{
+                margin-top: 10px;
+                text-align: center;
+            }
+            .return{
+                color: black;
+                font-size: 20px;
+                text-align: left;
+                margin-top: 0;
+            }
+            input[type="radio"]{
+                margin: 0 7px 0 7px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="return">
+            <a class="active" href="/returnToHome">return to homepage</a>
+        </div>
+        <div class="container">
+            <div>
+                <h1>Airline Website</h1>
+            </div>
+            <div>
+                <h3>If you would like to join the waitlist, submit your name and email</h3>
+                <h3>You will be notified by email if there is an open seat where you will be linked to the booking page.</h3>
+                <h3>If you do not however wish to join the waitlist, click on return home.</h3>
+                <form action="/waitlist" method='POST'> 
+                    <label for="name">Name:</label><br>
+                    <input type="text" placeholder="type name here" id="name" name="name"><br>
+                    <label for="name">Email:</label><br>
+                    <input type="text" placeholder="type email here" id="email" name="email"><br>
+                    <button type="submit" name="submit_waitlist" value="submit">submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

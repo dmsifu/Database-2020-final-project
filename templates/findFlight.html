@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Airline Website</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        <style>
+            .container{
+                margin-top: 10px;
+                text-align: center;
+            }
+            .return{
+                color: black;
+                font-size: 20px;
+                text-align: left;
+                margin-top: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="return">
+            <a class="active" href="/returnToHome">return to homepage</a>
+        </div>
+        <div class="container">
+            <div>
+                <h1>Airline Website</h1>
+                <div class="message">{{message}}</div>
+            </div>
+            <div style="font-size: 25px;">
+                <form action="/searchResults" method="POST">
+                    <label for="ticket">Type your ticket number below:</label><br>
+                    <input type="text" placeholder="type ticket number" id="ticket" name="ticket">
+                    <button type="submit" value="search" name="search">search</button>
+                </form>
+            </div>
+            <div style="padding-top: 50px; font-size: 25px;">
+                <form action="/clerk" method="POST">
+                    <label for="ticket">click the button if your a airline clerk!</label><br>
+                    <button type="submit" value="clerk" name="clerk">clerk</button>
+                </form>
+            </div>
+        </div>
+        
+    </body>
+</html>
